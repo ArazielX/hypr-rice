@@ -1,0 +1,10 @@
+configuration {
+  modi: "drun";
+  show-icons: true;
+  icon-theme: "Papirus-Dark"; /* Or OneUI */
+  font: "Terminus (TTF) Nerd Font 12";
+  display-drun: "Apps";
+  drun-display-format: "{name}";
+  sidebar-mode: false;
+}
+@theme "theme.rasi"

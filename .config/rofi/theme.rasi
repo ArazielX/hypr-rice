@@ -1,0 +1,87 @@
+/* Rofi Theme - Black, Blue, and Red Accents */
+* {
+    /* Define Colors */
+    bg:      #000000;
+    fg:      #3366FF;
+    red:     #FF0000;
+    blue:    #3366FF;
+    white:   #FFFFFF;
+    grey1:   #0A0A0A;
+    grey4:   #555555;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+window {
+    background-color: @bg;
+    border: 1px;
+    border-color: @blue;
+    border-radius: 10px;
+    width: 50%;
+    location: center;
+    anchor: center;
+    padding: 20px;
+}
+mainbox {
+    children: [inputbar, listview];
+    spacing: 15px;
+    background-color: transparent;
+}
+inputbar {
+    children: [prompt, entry];
+    background-color: @grey1;
+    border-radius: 5px;
+    padding: 10px;
+    text-color: @blue;
+    spacing: 10px;
+}
+prompt {
+    background-color: transparent;
+    text-color: @blue;
+    padding: 0 5px 0 0;
+}
+entry {
+    background-color: transparent;
+    text-color: @blue;
+    placeholder: "Search...";
+    placeholder-color: @grey4;
+    horizontal-align: 0;
+}
+listview {
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    background-color: transparent;
+    text-color: @fg;
+}
+element {
+    orientation: horizontal;
+    border-radius: 5px;
+    padding: 8px;
+    text-color: @fg;
+    background-color: transparent;
+}
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    expand: true;
+    horizontal-align: 0;
+    margin: 0px 0px 0px 8px;
+}
+element-icon {
+    background-color: transparent;
+    size: 24px;
+    margin: 0 10px 0 0;
+    vertical-align: 0.5;
+}
+element selected {
+    background-color: @grey1;
+    text-color: @red;
+    border: 1px;
+    border-color: @white;
+    border-radius: 5px;
+}

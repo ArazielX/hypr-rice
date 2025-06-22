@@ -1,0 +1,92 @@
+* {
+border: none;
+border-radius: 10px;
+font-family: "Terminus (TTF) Nerd Font", FontAwesome, sans-serif;
+font-size: 14px;
+min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0); /* Make the bar itself transparent */
+    color: #ffffff;
+}
+
+/* Style for each individual module */
+#workspaces,
+#window,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#clock,
+#battery,
+#tray,
+#custom-power,
+#custom-player,
+#custom-cava-left,
+#custom-cava-right {
+background-color: #1C1C1C; /* Dark grey background for each module */
+color: #ffffff;
+padding: 0 10px;
+margin: 5px 4px; /* Margin creates the gap between modules */
+border: 1px solid #333333; /* Border for each module */
+}
+
+/* --- Specific Module Colors & Styles --- */
+
+#workspaces button {
+padding: 0 5px;
+min-width: 20px;
+color: #888888;
+background-color: transparent;
+}
+
+#workspaces button:hover {
+background: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+color: #3366FF; /* Blue for focused workspace */
+}
+
+#workspaces button.urgent {
+color: #FF0000; /* Red for urgent workspace */
+}
+
+#cpu {
+color: #FF0000; /* Red for CPU text */
+}
+
+#memory {
+color: #3366FF; /* Blue for Memory text */
+}
+
+#custom-player {
+color: #66B2FF; /* Light blue for player */
+}
+
+#battery.critical:not(.charging) {
+background-color: #FF0000;
+color: #ffffff;
+}
+
+#custom-power {
+color: #FF0000;
+padding: 0 12px;
+}
+
+/* --- Cava Visualizer Color --- */
+#custom-cava-left,
+#custom-cava-right {
+color: #3366FF;
+}
+/* --- Paused Player Color --- */
+#custom-player.Paused {
+color: #FF0000;
+}
+/* --- Floating Cava Visualizer --- */
+#custom-cava-left,
+#custom-cava-right {
+background-color: transparent;
+border: none;
+}

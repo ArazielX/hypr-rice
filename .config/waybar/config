@@ -1,0 +1,55 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "modules-left": ["hyprland/workspaces", "custom/window-title"],
+    "modules-center": ["custom/cava-left", "custom/player", "custom/cava-right"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "network", "clock", "battery", "tray", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": " 1", "2": " 2", "3": " 3", "4": " 4", "5": " 5", "7": "",
+            "default": "", "urgent": "", "focused": ""
+        },
+        "persistent_workspaces": { "1": [], "2": [], "3": [], "4": [], "5": [], "7": [] }
+    },
+    "custom/window-title": {
+        "format": "{}",
+        "markup": "pango",
+        "exec": "/home/alzas/.config/hypr/scripts/waybar_window.py"
+    },
+    "custom/cava-left": {
+        "format": "{text}",
+        "return-type": "json",
+        "exec": "/home/alzas/.config/hypr/scripts/waybar_cava.sh left"
+    },
+    "custom/player": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "exec": "playerctl --follow metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"tooltip\": \"{{album}}\", \"class\": \"{{status}}\"}'",
+        "on-click": "playerctl play-pause",
+        "format-icons": {
+            "Playing": "",
+            "Paused": "",
+            "default": ""
+        }
+    },
+    "custom/cava-right": {
+        "format": "{text}",
+        "return-type": "json",
+        "exec": "/home/alzas/.config/hypr/scripts/waybar_cava.sh right"
+    },
+    "cpu": { "format": "CPU:  {usage}%", "interval": 1 },
+    "memory": { "format": "RAM: 󰍛 {}%", "interval": 1 },
+    "pulseaudio": {
+        "format": "{icon} {volume}%", "format-muted": " Muted",
+        "format-icons": { "default": ["", "", ""] },
+        "on-click": "pavucontrol"
+    },
+    "network": { "format-wifi": " {essid}", "on-click": "/home/alzas/.config/hypr/scripts/rofi_wifi_menu.sh" },
+    "clock": { "format": "{:%H:%M %b %d}" },
+    "battery": { "format": "{icon} {capacity}%", "format-charging": " {capacity}%" },
+    "tray": { "icon-size": 18, "spacing": 10 },
+    "custom/power": { "format": "", "on-click": "/home/alzas/.config/hypr/scripts/powermenu.sh" }
+}
