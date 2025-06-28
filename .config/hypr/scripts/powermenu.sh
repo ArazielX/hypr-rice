@@ -3,10 +3,10 @@
 # --- Rofi Power Menu ---
 
 # Options presented in the menu
-shutdown=" Shutdown"
-reboot=" Reboot"
-lock=" Lock"
-logout="󰍃 Logout"
+shutdown="     Shutdown"
+reboot="   Reboot"
+lock="     Lock"
+logout="󰍃   Logout"
 
 # Function to display the Rofi menu
 show_menu() {

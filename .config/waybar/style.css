@@ -7,11 +7,10 @@ min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0); /* Make the bar itself transparent */
+    background-color: rgba(0, 0, 0, 0);
     color: #ffffff;
 }
 
-/* Style for each individual module */
 #workspaces,
 #window,
 #cpu,
@@ -25,14 +24,12 @@ window#waybar {
 #custom-player,
 #custom-cava-left,
 #custom-cava-right {
-background-color: #1C1C1C; /* Dark grey background for each module */
+background-color: #1C1C1C;
 color: #ffffff;
 padding: 0 10px;
-margin: 5px 4px; /* Margin creates the gap between modules */
-border: 1px solid #333333; /* Border for each module */
+margin: 5px 4px;
+border: 1px solid #333333;
 }
-
-/* --- Specific Module Colors & Styles --- */
 
 #workspaces button {
 padding: 0 5px;
@@ -46,23 +43,24 @@ background: rgba(255, 255, 255, 0.1);
 }
 
 #workspaces button.active {
-color: #3366FF; /* Blue for focused workspace */
+color: #3366FF;
 }
 
 #workspaces button.urgent {
-color: #FF0000; /* Red for urgent workspace */
+color: #FF0000;
 }
 
-#cpu {
-color: #FF0000; /* Red for CPU text */
+#cpu,
+#custom-power {
+color: #FF0000;
 }
 
 #memory {
-color: #3366FF; /* Blue for Memory text */
+color: #3366FF;
 }
 
 #custom-player {
-color: #66B2FF; /* Light blue for player */
+color: #c2d7de; /* Changed from #FFFFFF */
 }
 
 #battery.critical:not(.charging) {
@@ -70,21 +68,18 @@ background-color: #FF0000;
 color: #ffffff;
 }
 
-#custom-power {
+#custom-cava-left {
 color: #FF0000;
-padding: 0 12px;
 }
 
-/* --- Cava Visualizer Color --- */
-#custom-cava-left,
 #custom-cava-right {
 color: #3366FF;
 }
-/* --- Paused Player Color --- */
+
 #custom-player.Paused {
 color: #FF0000;
 }
-/* --- Floating Cava Visualizer --- */
+
 #custom-cava-left,
 #custom-cava-right {
 background-color: transparent;

@@ -1,0 +1,66 @@
+configuration {
+    show-icons: true;
+}
+
+* {
+    font: "Noto Sans 14";
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+window {
+    background-color: rgba(28, 28, 28, 0.0);
+    border: 0px;
+    location: center;
+    padding: 0px;
+}
+
+mainbox {
+    orientation: vertical;
+    spacing: 0px;
+    padding: 0px;
+}
+
+listview {
+    columns: 2;
+    lines: 2;
+    spacing: 20px;
+    dynamic: false;
+    cycle: false;
+    fixed-height: true;
+    padding: 20px;
+}
+
+element {
+    orientation: vertical;
+    spacing: 10px;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: rgba(51, 51, 51, 0.75);
+    expand: false;
+    alignment: 0.5;
+    border: 0px;
+}
+
+element-text {
+    markup: true;
+    alignment: 0.5;
+    background-color: inherit;
+    color: inherit;
+    expand: false;
+    padding: 0px;
+    margin: 0px;
+}
+
+element-icon {
+    size: 48;
+    background-color: transparent;
+    padding: 0px;
+}
+
+element.selected {
+    border: 2px;
+    border-color: #FFFFFF;
+    background-color: rgba(28, 28, 28, 0.95);
+    color: #FF0000;
+}

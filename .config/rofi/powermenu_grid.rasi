@@ -1,0 +1,52 @@
+* {
+font: "Terminus (TTF) Nerd Font 14";
+background-color: transparent;
+text-color: #FFFFFF;
+accent-color: #3366FF;
+}
+
+window {
+    background-color: #1a1a1a;
+    border: 2px;
+    border-color: @accent-color;
+    border-radius: 15px;
+    width: 30%;
+    height: 30%;
+}
+
+mainbox {
+    children: [ box ];
+    padding: 2%;
+}
+
+box {
+    orientation: vertical;
+    spacing: 10px;
+    children: [ listview, listview ];
+}
+
+listview {
+    layout: horizontal;
+    spacing: 10px;
+    lines: 2;
+}
+
+element {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333333;
+    text-color: #FFFFFF;
+    orientation: vertical;
+    horizontal-align: 0.5;
+}
+
+element-icon {
+    size: 4em;
+}
+
+element.selected {
+    background-color: #000000;
+    text-color: #FF0000;
+    border: 2px;
+    border-color: #FFFFFF;
+}

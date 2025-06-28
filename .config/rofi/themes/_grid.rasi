@@ -1,0 +1,78 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
+* {
+    font:               "Terminus (TTF) Nerd Font 14";
+    background-color:   transparent;
+    text-color:         #ffffff;
+}
+
+window {
+    background-color:   #222222;
+    border:             2px;
+    border-color:       #0055ff;
+    border-radius:      12px;
+    width:              700px;
+    location:           center;
+    anchor:             center;
+    padding:            20px;
+}
+
+mainbox {
+    children:   [ inputbar, listview ];
+    spacing:    20px;
+}
+
+inputbar {
+    children:       [ prompt, entry ];
+    padding:        10px;
+    border-radius:  8px;
+    background-color: #111111;
+    text-color:     #ffffff;
+}
+
+prompt {
+    enabled:    true;
+    padding:    0 10px 0 0;
+}
+
+entry {
+    placeholder: "Search...";
+}
+
+listview {
+    columns:        2;
+    lines:          8; /* Or adjust as needed */
+    spacing:        15px;
+    cycle:          true;
+    dynamic:        true;
+    fixed-height:   false;
+}
+
+element {
+    orientation:        horizontal;
+    padding:            12px;
+    border-radius:      8px;
+    background-color:   #333333;
+    text-color:         #ffffff;
+}
+
+element-icon {
+    size:       24px; /* Adjusted for horizontal layout */
+    padding:    0 15px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element.selected {
+    background-color:   #0055ff;
+    text-color:         #ffffff;
+}
+
+element.urgent {
+    text-color: #ff4444;
+}

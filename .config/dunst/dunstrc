@@ -1,49 +1,50 @@
 [global]
-# The monitor to display notifications on
-monitor = DP-1
+    # The monitor to display notifications on
+    monitor = DP-1
+    follow = keyboard
 
-# Geometry and positioning
-geometry = "300x5-30+50"
-origin = top-right
-offset = 30x50
+    # Geometry and positioning
+    geometry = "300x5-30+50"
 
-# Theming
-frame_width = 2
-frame_color = "#3366FF"
-separator_color = "#3366FF"
-font = Terminus (TTF) Nerd Font 10
+    # Theming
+    frame_width = 2
+    frame_color = "#3366FF"
+    separator_color = "#3366FF"
+    font = Terminus (TTF) Nerd Font 10
 
-# Text alignment
-alignment = left
+    # Icons
+    icon_position = left
 
-# Other settings
-show_age_threshold = 60
-word_wrap = yes
-ellipsize = middle
-ignore_newline = no
-markup = full
-format = "<b>%s</b>\n%b"
-sort = yes
-indicate_hidden = yes
-shrink = no
-line_height = 0
-follow = mouse
-mouse_left_click = close_current
-mouse_middle_click = do_action
-mouse_right_click = close_all
+    # Text alignment
+    alignment = left
+
+    # Other settings
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    markup = full
+    format = "<b>%s</b>\n%b"
+    sort = yes
+    indicate_hidden = yes
+    shrink = no
+    line_height = 0
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
 
 [urgency_low]
-background = "#000000"
-foreground = "#FFFFFF"
-timeout = 10
+    background = "#000000"
+    foreground = "#FFFFFF"
+    timeout = 10
 
 [urgency_normal]
-background = "#000000"
-foreground = "#FFFFFF"
-timeout = 10
+    background = "#000000"
+    foreground = "#FFFFFF"
+    timeout = 10
 
 [urgency_critical]
-background = "#FF0000"
-foreground = "#FFFFFF"
-frame_color = "#FFFFFF"
-timeout = 0
+    background = "#FF0000"
+    foreground = "#FFFFFF"
+    frame_color = "#FFFFFF"
+    timeout = 0

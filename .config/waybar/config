@@ -10,7 +10,7 @@
         "format": "{icon}",
         "format-icons": {
             "1": " 1", "2": " 2", "3": " 3", "4": " 4", "5": " 5", "7": "",
-            "default": "", "urgent": "", "focused": ""
+            "default": "", "urgent": ""
         },
         "persistent_workspaces": { "1": [], "2": [], "3": [], "4": [], "5": [], "7": [] }
     },
@@ -25,7 +25,7 @@
         "exec": "/home/alzas/.config/hypr/scripts/waybar_cava.sh left"
     },
     "custom/player": {
-        "format": "{icon} {text}",
+        "format": "{icon}   {text}",
         "return-type": "json",
         "exec": "playerctl --follow metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"tooltip\": \"{{album}}\", \"class\": \"{{status}}\"}'",
         "on-click": "playerctl play-pause",
@@ -40,14 +40,18 @@
         "return-type": "json",
         "exec": "/home/alzas/.config/hypr/scripts/waybar_cava.sh right"
     },
-    "cpu": { "format": "CPU:  {usage}%", "interval": 1 },
-    "memory": { "format": "RAM: 󰍛 {}%", "interval": 1 },
+    "cpu": { "format": "  {usage}%", "interval": 1 },
+    "memory": { "format": "  {}%", "interval": 1 },
     "pulseaudio": {
         "format": "{icon} {volume}%", "format-muted": " Muted",
         "format-icons": { "default": ["", "", ""] },
         "on-click": "pavucontrol"
     },
-    "network": { "format-wifi": " {essid}", "on-click": "/home/alzas/.config/hypr/scripts/rofi_wifi_menu.sh" },
+    "network": {
+        "format-wifi": "   {signalStrength}%",
+        "format-disconnected": "󰤮 Offline",
+        "on-click": "/home/alzas/.config/hypr/scripts/rofi_wifi_menu.sh"
+    },
     "clock": { "format": "{:%H:%M %b %d}" },
     "battery": { "format": "{icon} {capacity}%", "format-charging": " {capacity}%" },
     "tray": { "icon-size": 18, "spacing": 10 },

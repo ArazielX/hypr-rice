@@ -1,0 +1,7 @@
+* {
+    bg: #111111;
+    bg-alt: #222222;
+    fg: #DDDDDD;
+    selected: #333333;
+    urgent: #FF4444;
+}
