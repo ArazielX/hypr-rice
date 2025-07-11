@@ -1,0 +1,77 @@
+/* Rofi App Grid Theme */
+
+* {
+    background-color:   transparent;
+    text-color:         #FFFFFF;
+    font:               "Terminus (TTF) Nerd Font 12";
+}
+
+window {
+    background-color:   rgba(28, 28, 28, 0.85);
+    border:             2px;
+    border-color:       #3366FF;
+    border-radius:      15px;
+    width:              50%;
+    height:             50%;
+    location:           center;
+    anchor:             center;
+}
+
+mainbox {
+    background-color:   transparent;
+    children: [ "inputbar", "listview" ];
+    spacing: 15px;
+    padding: 15px;
+}
+
+inputbar {
+    children:       [ "prompt", "entry" ];
+    padding:        10px;
+    border-radius:  8px;
+    background-color: #111111;
+    text-color:     #ffffff;
+}
+
+prompt {
+    enabled: true;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    placeholder: "Search Apps...";
+}
+
+listview {
+    columns: 5;
+    lines: 3;
+    spacing: 15px;
+    cycle:  true;
+    dynamic: true;
+    layout: vertical;
+}
+
+element {
+    orientation: vertical;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    text-color: #FFFFFF;
+    horizontal-align: 0.5;
+}
+
+element-icon {
+    size: 48px;
+    padding: 5px 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+element.selected {
+    background-color: transparent;
+    text-color: #FFFFFF;
+    border: 2px;
+    border-color: #FF0000; /* Added red border */
+}

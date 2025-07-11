@@ -1,0 +1,43 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    // This tells fastfetch to use your custom text file
+    "source": "~/.config/fastfetch/logo.txt",
+    "padding": {
+      "top": 2
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": "󰌢 Hardware"
+    },
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    {
+      "type": "break"
+    },
+    {
+      "type": "title",
+      "key": "Software"
+    },
+    "os",
+    "kernel",
+    "packages",
+    "wm",
+    "terminal",
+    "shell",
+    {
+      "type": "break"
+    },
+    {
+      "type": "title",
+      "key": "󰔟 Uptime / Age"
+    },
+    "uptime",
+    "break",
+    "colors"
+  ]
+}

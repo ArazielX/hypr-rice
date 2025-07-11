@@ -1,0 +1,26 @@
+;; --- Variables ---
+(defvar album_art_path "")
+(defvar song_title "Nothing Playing")
+(defvar song_artist "")
+(defvar song_album "")
+
+;; --- Widgets ---
+(defwidget music_widget []
+  (box :class "music-widget-box" :orientation "h" :space-evenly false :spacing 20
+    (box :class "album-art" :style "background-image: url('${album_art_path}');")
+    (box :class "song-info" :orientation "v" :space-evenly true :valign "center" :spacing 5
+      (label :text "▶ ${song_title}" :class "song-title")
+      (label :text "by ${song_artist}" :class "song-artist")
+      (label :text "from ${song_album}" :class "song-album")
+    )
+  )
+)
+
+;; --- Window ---
+(defwindow music_notification
+  :monitor 1
+  :geometry (geometry :x "-2%" :y "5%" :width "400px" :height "130px" :anchor "top right")
+  :stacking "fg"
+  :focusable false
+  (music_widget)
+)

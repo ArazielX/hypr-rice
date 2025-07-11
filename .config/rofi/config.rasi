@@ -1,4 +1,8 @@
 configuration {
+    drun-launch-command: "~/.config/hypr/scripts/rofi_runner.sh {id}";
+}
+
+configuration {
   modi: "drun";
   show-icons: true;
   icon-theme: "Papirus-Dark"; /* Or OneUI */

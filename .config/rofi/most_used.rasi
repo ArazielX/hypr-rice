@@ -1,0 +1,23 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    drun-display-format: "{name}";
+    drun-launch-command: "~/.config/hypr/scripts/rofi_runner.sh '{id}'";
+}
+
+* {
+    font: "Terminus (TTF) Nerd Font 12";
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+window {
+    background-color: #000000;
+    border: 1px;
+    border-color: #3366FF;
+    border-radius: 10px;
+    width: 50%;
+    location: center;
+    anchor: center;
+    padding: 20px;
+}
