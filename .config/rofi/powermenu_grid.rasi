@@ -1,52 +1,96 @@
+/* Rofi Power Menu - Final Stable Version with Static Title, No Crashes */
 * {
-font: "Terminus (TTF) Nerd Font 14";
-background-color: transparent;
-text-color: #FFFFFF;
-accent-color: #3366FF;
+    font:               "Terminus (TTF) Nerd Font 14";
+    background-color:   transparent;
+    text-color:         #3366FF;
 }
 
 window {
-    background-color: #1a1a1a;
-    border: 2px;
-    border-color: @accent-color;
-    border-radius: 15px;
-    width: 30%;
-    height: 30%;
+    background-color:   rgba(28, 28, 28, 0.9);
+    border:             2px;
+    border-color:       #3366FF;
+    border-radius:      20px;
+    width:              450px;
+    location:           center;
+    anchor:             center;
+    padding:            0px;
+    // ⚠️ children removed to prevent message widget error
 }
 
-mainbox {
-    children: [ box ];
-    padding: 2%;
-}
-
-box {
-    orientation: vertical;
-    spacing: 10px;
-    children: [ listview, listview ];
-}
-
-listview {
-    layout: horizontal;
-    spacing: 10px;
-    lines: 2;
-}
-
-element {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #333333;
-    text-color: #FFFFFF;
-    orientation: vertical;
+message {
+    text: "⚡ Power Menu";
+    padding: 2px 0px 0px 0px;
+    text-color: #3366FF;
+    font: "Terminus (TTF) Nerd Font Bold 16";
     horizontal-align: 0.5;
 }
 
-element-icon {
-    size: 4em;
+inputbar {
+    padding: 0;
+    margin: 0;
+    spacing: 0;
+    border: 0;
+    height: 0px;
+    background-color: transparent;
+}
+
+entry {
+    cursor:             #00000000;
+    text-color:         #00000000;
+    background-color:   transparent;
+    expand:             false;
+    width:              0px;
+    height:             0px;
+    margin:             0;
+    padding:            0;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+mainbox {
+    padding:            10px 10px 5px 10px;
+    spacing:            0px;
+}
+
+listview {
+    lines:              2;
+    columns:            2;
+    spacing:            15px;
+    layout:             vertical;
+    fixed-height:       false;
+    dynamic:            true;
+    cycle:              false;
+    margin:             0px 0px 10px 0px; /* Adds bottom balance */
+}
+
+element {
+    padding:            15px;
+    border-radius:      8px;
+    background-color:   #333333;
+    text-color:         #3366FF;
+    horizontal-align:   0.5;
+    vertical-align:     0.5;
+}
+
+element-text {
+    background-color:   inherit;
+    text-color:         inherit;
+    horizontal-align:   0.5;
+}
+
+element.button-shutdown,
+element.button-logout,
+element.button-reboot,
+element.button-lock {
+    text-color: #3366FF;
 }
 
 element.selected {
-    background-color: #000000;
-    text-color: #FF0000;
-    border: 2px;
-    border-color: #FFFFFF;
+    background-color:   #1C1C1C;
+    text-color:         #FF0000;
+    border:             1px;
+    border-color:       #FFFFFF;
+    border-radius:      8px;
 }

@@ -1,17 +1,12 @@
 #!/bin/bash
 
-# Rofi Power Menu - Final Version with Title and No Input Bar
+# Rofi Power Menu - Final Working Version (handles spacing issues)
 
-# Set message title for rofi
-export ROFI_MESSAGE="Power Menu"
-
-# Define menu options with icon and class metadata
 shutdown="   Shutdown\0meta\x1fbutton-shutdown"
 logout="󰍃   Logout\0meta\x1fbutton-logout"
 reboot="   Reboot\0meta\x1fbutton-reboot"
 lock="   Lock\0meta\x1fbutton-lock"
 
-# Launch Rofi with custom theme and no search bar
 chosen_option=$(echo -e "$shutdown\n$logout\n$reboot\n$lock" | rofi -dmenu \
     -theme ~/.config/rofi/powermenu_grid.rasi \
     -p "" \
@@ -19,7 +14,12 @@ chosen_option=$(echo -e "$shutdown\n$logout\n$reboot\n$lock" | rofi -dmenu \
     -no-custom \
     -format s)
 
-# Act on user choice
+# Trim whitespace from the result
+chosen_option=$(echo "$chosen_option" | xargs)
+
+# Debug (optional)
+# echo "Chosen: '$chosen_option'"
+
 case "$chosen_option" in
     " Shutdown")
         systemctl poweroff
